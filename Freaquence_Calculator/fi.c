@@ -5,11 +5,10 @@
 int main()
 {
 
-    float fi[MAX_SIZE];
-    float N;
-    float ni[MAX_SIZE];
-    char resp;
-    int i, n;
+    float fi[MAX_SIZE]; // Frequence
+    float N = 0;        // sum of effectives
+    float ni[MAX_SIZE]; // effectives
+    int i, n;           // @i the counter , @n The number of effectives
 
     
     
@@ -19,20 +18,21 @@ int main()
         printf("Enter your ni: \n");
         for (i = 0; i < n; i++)
         {
-            scanf("%f", &ni[i]); // read xi from user
+            scanf("%f", &ni[i]); // read ni from user
+            N += ni[i];
         }
         
-        printf("Enter your N: \n"); // read the total of xi from user
-        scanf("%f", &N);
 
-        if (N <= 0)
+        if (N <= 0)     // Make sure that N not = 0 or less
         {
             printf("Invalid Input");
             return 1;
         }
-        for (i = 0; i < n; i++)
+        printf("The freaquences are: \n"); // Prints the results
+        for (i = 0; i < n; i++) // loop to do the calculation
         {
             fi[i] = (ni[i] *= 100) / N;
+            
             printf("fi : %f\n", fi[i]);
         }        
 
