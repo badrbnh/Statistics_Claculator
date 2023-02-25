@@ -16,7 +16,7 @@ int main()
         printf("Enter the number of effectives: "); // read number of effectives from use
         scanf("%d", &n);
 
-        printf("Enter your xi: \n");
+        printf("Enter your ni: \n");
         for (i = 0; i < n; i++)
         {
             scanf("%f", &ni[i]); // read xi from user
